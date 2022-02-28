@@ -29,6 +29,7 @@ def getTag() {
 
     newtag = _load()
     tag = "${newtag['version']}.${newtag['build']}"
+    echo "HEy tag id is - ${tag}"
     return tag
 
 }
