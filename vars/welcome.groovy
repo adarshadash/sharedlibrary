@@ -25,11 +25,28 @@ def _save(application) {
 
 }
 
-def getTag() {
+def getVersion() {
 
     newtag = _load()
-    tag = "${newtag['version']}.${newtag['build']}"
-    echo "HEy tag id is - ${tag}"
+    tag = "${newtag['version']}"
+    echo "HEy VErsion id is - ${tag}"
     return tag
 
 }
+
+def getBuild(){
+    
+    newtag = _load()
+    tag = ${newtag['build']}
+    echo "HEy Build id is - ${tag}"
+    return tag
+
+}
+
+def incrementbyone(number){
+    number=number+1
+    echo "updated number is ${number}"
+    return number
+}
+
+
