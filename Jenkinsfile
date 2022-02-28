@@ -10,6 +10,7 @@ pipeline{
                calculator.add(4,5)
                calculator.multiply(5,6)
                welcome.anothercall("OtherCall-Name")
+               calculator.getTag()    
                }
             }
         }
