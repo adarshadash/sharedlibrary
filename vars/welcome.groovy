@@ -37,7 +37,7 @@ def getVersion() {
 def getBuild(){
     
     newtag = _load()
-    tag = ${newtag['build']}
+    tag = "${newtag['build']}"
     echo "HEy Build id is - ${tag}"
     return tag
 
