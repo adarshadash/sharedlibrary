@@ -44,7 +44,7 @@ def getBuild(){
 }
 
 def incrementbyone(number){
-    number=number+1
+    number=number.toInteger()+1
     echo "updated number is ${number}"
     return number
 }
