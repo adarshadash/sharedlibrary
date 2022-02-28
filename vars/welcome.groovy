@@ -1,3 +1,7 @@
+@Grab('org.yaml:snakeyaml:1.17')
+    
+import org.yaml.snakeyaml.Yaml
+
 def call(name){
    echo "Hey ${name}, How are you?"
 }
