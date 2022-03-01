@@ -58,5 +58,5 @@ def updateApplication(){
     sh "cat ${env.WORKSPACE}/application.yaml"
     sh "echo 'The current build is: ${version}'"   
     sh "git commit -m 'increment version: ${version}'"
-    sh "git tag -a -m 'version ${version}' ${version}"
+    sh "git push"
 }
