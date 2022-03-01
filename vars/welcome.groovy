@@ -61,5 +61,5 @@ def updateApplication(){
     sh "git config user.name adarshadash"
     sh "git commit -m 'increment version: ${version}'"
     sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
-    sh "git push git@github.com:adarshadash/sharedlibrary.git HEAD:main"
+    sh "git push origin HEAD:main"
 }
