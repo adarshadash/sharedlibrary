@@ -64,6 +64,7 @@ def updateApplication(){
     sh "cd /Users/yml/.jenkins/workspace/test_library_pipeline"
     sh "pwd"
     sh "git status"
+    sh "git checkout main"
     sh "git branch"
     sh "git push -u origin main"
 }
