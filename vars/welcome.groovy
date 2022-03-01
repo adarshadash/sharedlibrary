@@ -60,10 +60,10 @@ def updateApplication(){
     sh "echo 'The current build is: ${version}'"
     sh "git remote set-url origin https://github.com/adarshadash/sharedlibrary.git"
     sh "git add ."
+     sh "git pull"
     sh "git commit -m 'increment version: ${version}'"
     sh "pwd"
     sh "cd /Users/yml/.jenkins/workspace/test_library_pipeline"
     sh "pwd"
-    sh "git pull"
     sh "git push -u origin main"
 }
