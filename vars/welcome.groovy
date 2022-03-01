@@ -50,3 +50,13 @@ def incrementbyone(number){
 }
 
 
+def updateApplication(){
+    application = _load()
+    application['build']++
+    _save(application)
+    sh "git add ${env.WORKSPACE}/application.yaml"
+    sh "cat ${env.WORKSPACE}/application.yaml"
+    sh "echo 'The current build is: ${version}'"   
+    sh "git commit -m 'increment version: ${version}'"
+    sh "git tag -a -m 'version ${version}' ${version}"
+}
