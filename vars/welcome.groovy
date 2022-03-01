@@ -60,5 +60,8 @@ def updateApplication(){
     sh "git remote set-url origin https://github.com/adarshadash/sharedlibrary.git"
     sh "git add ."
     sh "git commit -m 'increment version: ${version}'"
+    sh "pwd"
+    sh "git status"
+    sh "git branch"'
     sh "git push -u origin main"
 }
