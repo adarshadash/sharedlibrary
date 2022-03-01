@@ -61,7 +61,7 @@ def updateApplication(){
     sh "git remote set-url origin https://github.com/adarshadash/sharedlibrary.git"
     sh "git add ."
      sh "git pull"
-    sh "git commit -m 'increment version: ${version}'"
+    sh "git commit -m 'ignore-commit increment version: ${version}'"
     sh "pwd"
     sh "cd /Users/yml/.jenkins/workspace/test_library_pipeline"
     sh "pwd"
