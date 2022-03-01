@@ -56,9 +56,9 @@ def updateApplication(){
     _save(application)
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "cat ${env.WORKSPACE}/application.yaml"
-    sh "echo 'The current build is: ${version}'"   
-    sh "git commit -m 'increment version: ${version}'"
+    sh "echo 'The current build is: ${version}'"  
     sh "git config user.email adi.dash880@gmail.com"
-    sh "git config adarshadash"
+    sh "git config user.name adarshadash"
+    sh "git commit -m 'increment version: ${version}'"
     sh "git push origin HEAD:main"
 }
