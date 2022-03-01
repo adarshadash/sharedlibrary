@@ -53,6 +53,7 @@ def incrementbyone(number){
 def updateApplication(){
     application = _load()
     application['build']++
+    sh "git checkout main"    
     _save(application)
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "cat ${env.WORKSPACE}/application.yaml"
@@ -64,7 +65,6 @@ def updateApplication(){
     sh "cd /Users/yml/.jenkins/workspace/test_library_pipeline"
     sh "pwd"
     sh "git status"
-    sh "git checkout main"
     sh "git branch"
     sh "git push -u origin main"
 }
