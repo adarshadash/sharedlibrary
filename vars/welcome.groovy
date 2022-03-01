@@ -61,7 +61,9 @@ def updateApplication(){
     sh "git add ."
     sh "git commit -m 'increment version: ${version}'"
     sh "pwd"
+    sh "cd ~/librarytest"
+    sh "pwd"
     sh "git status"
-    sh "git branch"'
+    sh "git branch"
     sh "git push -u origin main"
 }
