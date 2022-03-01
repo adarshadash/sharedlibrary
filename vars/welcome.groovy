@@ -59,6 +59,6 @@ def updateApplication(){
     sh "echo 'The current build is: ${version}'"   
     sh "git commit -m 'increment version: ${version}'"
     sh "git config user.email adi.dash880@gmail.com"
-    sh "git config adarshadash ")
+    sh "git config adarshadash"
     sh "git push origin HEAD:main"
 }
