@@ -61,7 +61,7 @@ def updateApplication(){
     sh "git add ."
     sh "git commit -m 'increment version: ${version}'"
     sh "pwd"
-    sh "cd ~/librarytest"
+    sh "cd ~/Users/yml/.jenkins/workspace/test_library_pipeline"
     sh "pwd"
     sh "git status"
     sh "git branch"
