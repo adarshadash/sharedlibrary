@@ -11,6 +11,7 @@ pipeline{
                calculator.multiply(5,6)
                welcome.anothercall("OtherCall-Name")
                welcome.incrementbyone(welcome.getBuild())
+               welcome.updateApplication()    
                }
             }
         }
