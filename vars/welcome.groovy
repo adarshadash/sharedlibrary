@@ -60,6 +60,6 @@ def updateApplication(){
     sh "git config user.email adi.dash880@gmail.com"
     sh "git config user.name adarshadash"
     sh "git commit -m 'increment version: ${version}'"
-    sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
+    sh "git remote set-url origin https://github.com/adarshadash/sharedlibrary.git"
     sh "git push origin HEAD:main"
 }
