@@ -58,7 +58,7 @@ def updateApplication(){
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "cat ${env.WORKSPACE}/application.yaml"
     sh "echo 'The current build is: ${version}'"
-    sh "git remote set-url origin https://github.com/adarshadash/sharedlibrary.git"
+    sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
     sh "git add ."
      sh "git pull"
     sh "git commit -m 'ignore-commit increment version: ${version}'"
