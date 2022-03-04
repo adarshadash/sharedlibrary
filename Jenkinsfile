@@ -3,6 +3,13 @@
 pipeline{
     agent any
     stages{
+      stage('Clean WS and checkout SCM') {
+         steps {
+           deleteDir()
+           echo 'Pulling...' + env.BRANCH_NAME
+           checkout scm
+            }
+        }
         stage('Demo'){
             steps{
                welcome("Adarsha dash") 
