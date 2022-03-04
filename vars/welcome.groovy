@@ -53,7 +53,7 @@ def incrementbyone(number){
 def updateApplication(){
     application = _load()
     application['build']++
-    sh "git checkout scm"    
+    sh "git checkout main"    
     _save(application)
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "cat ${env.WORKSPACE}/application.yaml"
