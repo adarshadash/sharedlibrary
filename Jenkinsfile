@@ -17,9 +17,10 @@ pipeline{
         }
     }
     
+    /*
    post {
     always {
       cleanWs()
     }
-  }
+  }*/
 }
