@@ -54,17 +54,14 @@ def updateApplication(){
     application = _load()
     application['build']++
     echo "I am inside Update applicationScript"    
-    bat 'git checkout ${env.BRANCH_NAME}'    
+    bat 'git checkout %env.BRANCH_NAME%'    
     _save(application)
-   } 
-   
-def publishtogit(){
-    sh "git add ${env.WORKSPACE}/application.yaml"
-    sh "cat ${env.WORKSPACE}/application.yaml"
-    sh "echo 'The current build is: ${version}'"
-    sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
-    sh "git add ."
-     sh "git pull"
-    sh "git commit -m 'ignore-commit increment version: ${version}'"
-    sh "git push -u origin:$BRANCH_NAME"
+    bat "git add ${env.WORKSPACE}/application.yaml"
+    bat "cat ${env.WORKSPACE}/application.yaml"
+    bat "echo 'The current build is: ${version}'"
+    bat "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
+    bat "git add ."
+     bat "git pull"
+    bat "git commit -m 'ignore-commit increment version: ${version}'"
+    bat "git push -u origin:$BRANCH_NAME"
 }
