@@ -57,7 +57,6 @@ def updateApplication(){
     bat 'git checkout %env.BRANCH_NAME%'    
     _save(application)
     bat "git add ${env.WORKSPACE}/application.yaml"
-    bat "cat ${env.WORKSPACE}/application.yaml"
     bat "echo 'The current build is: ${version}'"
     bat "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
     bat "git add ."
