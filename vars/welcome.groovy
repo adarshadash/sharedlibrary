@@ -56,7 +56,6 @@ def updateApplication(){
     echo "I am inside Update applicationScript"    
     sh "git checkout $BRANCH_NAME"    
     _save(application)
-    sh "
    } 
    
 def publishtogit(){
