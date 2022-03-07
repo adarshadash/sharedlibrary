@@ -53,8 +53,13 @@ def incrementbyone(number){
 def updateApplication(){
     application = _load()
     application['build']++
+    echo "I am inside Update applicationScript"    
     sh "git checkout $BRANCH_NAME"    
     _save(application)
+    sh "
+   } 
+   
+def publishtogit(){
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "cat ${env.WORKSPACE}/application.yaml"
     sh "echo 'The current build is: ${version}'"
