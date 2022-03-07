@@ -54,7 +54,7 @@ def updateApplication(){
     application = _load()
     application['build']++
     echo "I am inside Update applicationScript"    
-    bat 'git checkout $BRANCH_NAME"'    
+    bat 'git checkout env.BRANCH_NAME'    
     _save(application)
    } 
    
