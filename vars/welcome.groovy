@@ -65,7 +65,7 @@ def updateApplication(){
     bat "git add ."
     bat "git checkout %env.BRANCH_NAME%" 
     bat "git status"
-    bat "git pull main"
+    bat "git pull"
     bat "git commit -m 'ignore-commit'"
     bat "git tag -a -m 'version ${version}'"
     bat "git push -u origin:main"
