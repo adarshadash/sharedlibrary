@@ -52,7 +52,6 @@ def incrementbyone(number){
 
 def updateApplication(){
     application = _load()
-    sh "ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts"
     application['build']++
     echo "I am inside Update applicationScript"    
     sh 'git checkout main'    
