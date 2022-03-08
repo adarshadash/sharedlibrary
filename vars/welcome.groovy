@@ -61,7 +61,6 @@ def updateApplication(){
    /* bat "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git" */
     bat "dir"
     bat "git add ."
-    bat "git pull"
     bat "git commit -m 'ignore-commit increment version: ${version}'"
     bat "git push -u origin:main"
 }
