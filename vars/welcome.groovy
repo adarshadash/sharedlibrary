@@ -62,11 +62,9 @@ def updateApplication(){
     sh "git config --global user.email 'adi.dash880@gmail.com'"
     sh "git config --global user.name 'adarshadash'"
     sh "git add ."
-     sh "git pull"
+    sh "git pull"
     sh "git commit -m 'ignore-commit increment version: ${version}'"
-    sh "pwd"
-    sh "cd /var/lib/jenkins/workspace/multibranchjob_main"
-    sh "pwd"
+
     sh "git push"
     /*
     sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
