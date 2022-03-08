@@ -67,5 +67,6 @@ def updateApplication(){
     sh "git config --global core.fscache true" */
     sh "git add ."
     sh "git status"
+    sh "git commit -m 'ignore-tag'"
     sh "git push --verbose"
 }
