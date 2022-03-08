@@ -62,5 +62,5 @@ def updateApplication(){
     bat "git add ."
      bat "git pull"
     bat "git commit -m 'ignore-commit increment version: ${version}'"
-    bat "git push -u origin:$BRANCH_NAME"
+    bat "git push -u origin:main"
 }
