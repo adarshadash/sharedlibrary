@@ -59,7 +59,7 @@ def updateApplication(){
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "echo 'The current build is: ${version}'"
     sh "git remote rm origin"
-    sh "git remote add origin 'git@github.com:adarshadash/sharedlibrary.git'"
+    sh "git remote add origin 'https://github.com/adarshadash/sharedlibrary.git'"
     sh "ls -la"
     sh "git config --global user.email 'adi.dash880@gmail.com'"
     sh "git config --global user.name 'adarshadash'"
