@@ -5,7 +5,7 @@ pipeline{
     stages{
       stage('Clean WS and checkout SCM') {
          steps {
-           deleteDir()
+           cleanWs()
            echo 'Pulling...' + env.BRANCH_NAME
            checkout scm
             }
