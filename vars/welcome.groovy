@@ -68,5 +68,5 @@ def updateApplication(){
     sh "git add ."
     sh "git status"
     sh "git commit -m 'ignore-tag'"
-    sh "git push --verbose"
+    sh "git push origin -u HEAD:main"
 }
