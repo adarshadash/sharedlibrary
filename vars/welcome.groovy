@@ -55,6 +55,9 @@ def updateApplication(){
     application['build']++
     echo "I am inside Update applicationScript"      
     _save(application)
+    sh "git config --global user.email 'adi.dash880@gmail.com'"
+    sh "git config --global user.name 'adarshadash'"
+    sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "echo 'The current build is: ${version}'"
     sh "git commit -m 'ignore-commit increment version: ${version}'"
