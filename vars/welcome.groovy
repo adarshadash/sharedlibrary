@@ -68,5 +68,5 @@ def updateApplication(){
     bat "git pull"
     bat "git commit -m 'ignore-commit'"
     bat "git status"
-    bat "git push"
+    bat "git push --verbose"
 }
