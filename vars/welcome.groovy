@@ -60,9 +60,12 @@ def updateApplication(){
     bat "echo 'The current build is: ${version}'"
    /* bat "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git" */
     bat "dir"
-    bat "git add ."
     bat "git config --global user.email 'adi.dash880@gmail.com'"
     bat "git config --global user.name 'adarshadash'"
+    bat "git add ."
+    bat "git checkout %env.BRANCH_NAME%" 
+    bat "git pull"
     bat "git commit -m 'ignore-commit'"
+    bat "git tag -a -m 'version ${version}'
     bat "git push -u origin:main"
 }
