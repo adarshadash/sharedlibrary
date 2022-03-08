@@ -58,8 +58,17 @@ def updateApplication(){
     _save(application)
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "echo 'The current build is: ${version}'"
+    sh "git remote set-url origin https://github.com/adarshadash/sharedlibrary.git"
+    sh "git add ."
+     sh "git pull"
+    sh "git commit -m 'ignore-commit increment version: ${version}'"
+    sh "pwd"
+    sh "cd /var/lib/jenkins/workspace/multibranchjob_main"
+    sh "pwd"
+    sh "git push"
+    /*
     sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
-    sh "ls -la"
+     sh "ls -la"
     sh "git config --global user.email 'adi.dash880@gmail.com'"
     sh "git config --global user.name 'adarshadash'"
     sh "git config --global core.preloadindex true"
@@ -68,5 +77,5 @@ def updateApplication(){
     sh "git add ."
     sh "git status"
     sh "git commit -m 'ignore-tag'"
-    sh "git push -u origin:main"
+    sh "git push -u origin:main" */
 }
