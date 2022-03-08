@@ -53,16 +53,11 @@ def incrementbyone(number){
 def updateApplication(){
     application = _load()
     application['build']++
-    echo "I am inside Update applicationScript"    
-    sh 'git checkout main'    
+    echo "I am inside Update applicationScript"      
     _save(application)
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "echo 'The current build is: ${version}'"
-    sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
-    sh "git add ."
-    sh "git pull"
     sh "git commit -m 'ignore-commit increment version: ${version}'"
-
     sh "git push"
     /*
     sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
