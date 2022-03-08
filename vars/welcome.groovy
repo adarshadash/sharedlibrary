@@ -68,7 +68,5 @@ def updateApplication(){
     bat "git pull"
     bat "git commit -m 'ignore-commit'"
     bat "git status"
-    bat "git tag -a -m 'version ${version}'"
-    bat "git status"
-    bat "git push -u origin:main"
+    bat "git push"
 }
