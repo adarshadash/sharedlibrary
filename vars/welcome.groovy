@@ -61,6 +61,8 @@ def updateApplication(){
    /* bat "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git" */
     bat "dir"
     bat "git add ."
+    bat "git config --global user.email 'adi.dash880@gmail.com'"
+    bat "git config --global user.name 'adarshadash'"
     bat "git commit -m 'ignore-commit'"
     bat "git push -u origin:main"
 }
