@@ -53,6 +53,7 @@ def incrementbyone(number){
 def updateApplication(){
     application = _load()
     application['build']++
+    sh "git checkout main"    
     echo "I am inside Update applicationScript"      
     _save(application)
     sh "git config --global user.email 'adi.dash880@gmail.com'"
@@ -60,6 +61,8 @@ def updateApplication(){
     sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "echo 'The current build is: ${version}'"
+    sh "git status"
+    sh "git pull"
     sh "git commit -m 'ignore-commit increment version: ${version}'"
     sh "git push origin HEAD:main"
     /*
