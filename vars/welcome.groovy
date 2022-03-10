@@ -62,7 +62,7 @@ def updateApplication(){
     sh "git add ${env.WORKSPACE}/application.yaml"
     sh "echo 'The current build is: ${version}'"
     sh "git status"
-    sh "git pull origin master --allow-unrelated-histories"
+    sh "git pull origin ${env.BRANCH_NAME} --allow-unrelated-histories"
     sh "git commit -m 'ignore-commit increment version: ${version}'"
     sh "git push origin HEAD:${env.BRANCH_NAME}"
     /*
