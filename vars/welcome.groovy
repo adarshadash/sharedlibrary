@@ -55,7 +55,7 @@ def updateApplication(){
     application['build']++
     sh "git checkout main"    
     _save(application)
-    sh "git add ${env.WORKSPACE}/application.yaml"
+   /* sh "git add ${env.WORKSPACE}/application.yaml"
     sh "cat ${env.WORKSPACE}/application.yaml"
     sh "echo 'The current build is: ${version}'"
     sh "git remote set-url origin https://github.com/adarshadash/sharedlibrary.git"
@@ -65,5 +65,5 @@ def updateApplication(){
     sh "pwd"
     sh "cd /Users/yml/.jenkins/workspace/test_library_pipeline"
     sh "pwd"
-    sh "git push -u origin main"
+    sh "git push -u origin main" */
 }
