@@ -56,6 +56,7 @@ def updateApplication(){
         sh "git checkout ${env.BRANCH_NAME}"    
     echo "I am inside Update applicationScript - ${env.BRANCH_NAME}"      
     _save(application)
+    /*
     sh "git config --global user.email 'adi.dash880@gmail.com'"
     sh "git config --global user.name 'adarshadash'"
     sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
@@ -65,7 +66,7 @@ def updateApplication(){
     sh "git pull origin ${env.BRANCH_NAME} --allow-unrelated-histories"
     sh "git commit -m 'ignore-commit increment version: ${version}'"
     sh "git push origin HEAD:${env.BRANCH_NAME}"
-    /*
+    
     sh "git remote set-url origin git@github.com:adarshadash/sharedlibrary.git"
      sh "ls -la"
     sh "git config --global user.email 'adi.dash880@gmail.com'"
